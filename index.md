@@ -35,7 +35,7 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% comment %}
 8< ============= For a workshop delete from here =============
 For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
+
 
 
 <div class="alert alert-danger">
@@ -51,7 +51,6 @@ remember to uncomment the `pilot_lesson_site`, `pilot_pre_survey`, and `pilot_po
 fields in `_config.yml`
 </div>
 
-{% comment %}
 8< ============================= until here ==================
 {% endcomment %}
 
@@ -373,7 +372,8 @@ of code below the Schedule `<h2>` header below with
 {% endcomment %}
 
 <h2 id="schedule">Schedule</h2>
-
+{% include custom_schedule.html %}
+{% comment %}
 {% if site.carpentry == "swc" %}
 {% include swc/schedule.html %}
 {% elsif site.carpentry == "dc" %}
@@ -382,6 +382,7 @@ of code below the Schedule `<h2>` header below with
 {% include lc/schedule.html %}
 {% elsif site.carpentry == "pilot" %}
 The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. If you would like to know the timing of these breaks in advance, please [contact the workshop organisers](#contact). For a list of lesson sections and estimated timings, [visit the lesson homepage]({{ site.lesson_site }}).
+{% endcomment %}
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
 See the contents of the _includes/custom_schedule.html file for an example of
